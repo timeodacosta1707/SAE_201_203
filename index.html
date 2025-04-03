@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Accueil</title>
+</head>
+
+<body>
+    <div class="partie_gauche">
+        <img src="./images/logo_iut.png" alt="Logo de l'IUT">
+        <h1 id="formTitle">Se connecter</h1>
+        <div class="switch">
+            <button class="tab active" id="loginTab">Se connecter</button>
+            <button class="tab" id="registerTab">S'inscrire</button>
+        </div>
+
+        <div class="form" id="loginForm">
+            <form action="" method="POST">
+                <input type="text" name="identifiant" id="identifiant" placeholder="Identifiant" required><br>
+                <input type="password" name="mdp" id="mdp" placeholder="Mot de passe..." required><br>
+                <a href="#" id="mdp_oublie">Mot de passe oublié ?</a><br><br>
+                <input type="submit" value="Se connecter">
+            </form>
+        </div>
+
+        <div class="form" id="registerForm">
+            <form action="" method="POST">
+                <input type="text" name="identifiant" placeholder="Identifiant" required><br>
+
+                <div class="input-group">
+                    <input type="date" name="date_naissance" required>
+                    <input type="text" name="num_etudiant" placeholder="N° Étudiant" required>
+                </div>
+
+                <input type="password" name="mdp" placeholder="Mot de passe..." required><br>
+                <input type="password" name="mdp_confirm" placeholder="Valider le mot de passe..." required><br>
+
+                <label>
+                    <input type="checkbox" required> J'accepte les <a href="">Conditions d'Utilisation</a>
+                </label><br><br>
+
+                <input type="submit" value="S'inscrire">
+            </form>
+        </div>
+    </div>
+
+    <div class="partie_droite">
+        <img src="./images/photo_iut.jpg" alt="IUT" class="logo">
+    </div>
+
+    <script src="./JS/switch_form.js"></script>
+
+</body>
+
+</html>
