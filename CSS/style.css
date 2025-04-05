@@ -99,6 +99,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 10px;
 }
 
+.partie_gauche form #mdp_oublie:hover {
+    text-decoration: underline;
+}
+
 input[type="submit"] {
     background-color: #2e2a75;
     color: white;
