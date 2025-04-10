@@ -144,3 +144,12 @@ input[type="submit"] {
 #registerForm {
     display: none;
 }
+
+#cond_util {
+    text-decoration: none;
+    color: #2e2a75;
+}
+
+#cond_util:hover {
+    text-decoration: underline;
+}
