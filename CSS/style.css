@@ -38,6 +38,7 @@ body {
 }
 
 .tab {
+    background-color: #e3f2fd;
     margin: 5px;
     padding: 12px 24px;
     border: none;
@@ -45,6 +46,7 @@ body {
     font-size: 16px;
     border-radius: 8px;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .tab.active {
@@ -55,6 +57,10 @@ body {
 .tab:not(.active) {
     background: none;
     color: black;
+}
+
+.tab:hover:not(.active) {
+    background-color: #c8e8ff;
 }
 
 .form {
@@ -73,9 +79,9 @@ textarea {
     border-bottom: 2px solid #ccc;
     background-color: transparent;
     font-size: 16px;
-    transition: border-bottom 0.3s ease;
     outline: none;
     resize: vertical;
+    transition: border-bottom 0.3s ease;
 }
 
 textarea {
@@ -120,12 +126,19 @@ textarea[placeholder] {
 input[type="submit"] {
     background-color: #2e2a75;
     color: white;
+    font-weight: bold;
     border: none;
     padding: 12px;
     font-size: 16px;
     border-radius: 8px;
     width: 100%;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #e3f2fd;
+    color: black;
 }
 
 .partie_droite {
@@ -182,4 +195,67 @@ input[type="submit"] {
     height: 100%;
     width: 100%;
     opacity: 10%;
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+    transform: scale(1);
+}
+
+input[type="checkbox"] {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 5px;
+    display: inline-block;
+    appearance: none;
+    position: relative;
+    background-color: #e3f2fd;
+    border-radius: 15%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+input[type="checkbox"]::after {
+    content: '';
+    display: block;
+    height: 0.5rem;
+    width: 0.2rem;
+    border-bottom: .20rem solid #e3f2fd;
+    border-right: .20rem solid #e3f2fd;
+    opacity: 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+    position: absolute;
+    top: 45%;
+    left: 21%;
+    transition: .25s ease;
+}
+
+input[type="checkbox"]::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    background-color: #2e2a75;
+    border-radius: 50%;
+    opacity: .5;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease;
+}
+
+input[type="checkbox"]:checked::before {
+    height: 130%;
+    width: 130%;
+    opacity: 100%;
+}
+
+input[type="checkbox"]:checked::after {
+    opacity: 100%;
+}
+
+span {
+    font-size: 2rem;
 }
