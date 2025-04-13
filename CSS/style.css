@@ -299,3 +299,72 @@ span {
 #retour_form:hover {
     text-decoration: underline;
 }
+
+.code-conteneur {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.case {
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    outline: none;
+    transition: border-bottom 0.3s ease;
+}
+
+.case:focus {
+    border-bottom-color: #2e2a75;
+}
+
+.texte-verification {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.renvoyer-code {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #2e2a75;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.renvoyer-code:hover {
+    text-decoration: underline;
+}
+
+.bouton-envoyer {
+    background-color: #2e2a75;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bouton-envoyer:hover {
+    background-color: #e3f2fd;
+    color: black;
+}
+
+.bouton-envoyer:disabled {
+    background-color: #9b98c0;
+    cursor: not-allowed;
+    color: white;
+}
