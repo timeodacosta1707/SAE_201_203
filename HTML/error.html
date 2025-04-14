@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.min.css">
+    <title>SAÉ 203-205 - Error</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../CSS/">
+</head>
+    <body>
+
+        <img src="../images/logo_iut.png" alt="Logo de l'IUT" class="logo">
+
+        <h1 class="error"><i class="fa-solid fa-times-circle"></i>Une erreur s'est produite</h1>
+        <p>Malheureusement, votre message n'a pas pu être envoyé. Veuillez réessayer plus tard.</p>
+        <p>Vous serez redirigé vers la page d'accueil dans quelques secondes.</p>
+
+        <p><a href="../index.html"><i class="fa-solid fa-house"></i> Retour à la page d'accueil</a></p>
+        <script>
+            setTimeout(() => {
+                window.location.href = "../index.html";
+            }, 10000);
+        </script>
+    </body>
+</html>
