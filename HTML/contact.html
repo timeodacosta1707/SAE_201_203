@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/navbar.css">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/stylecontact.css">
     <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Contact</title>
 </head>
 
@@ -15,8 +16,8 @@
         <img class="logo_form" src="../images/logo_iut.png" alt="Logo de l'IUT">
         <h1 id="formTitle">Nous contacter</h1>
 
-        <div class="form" id="loginForm">
-            <form action="" method="POST">
+        <div class="form" id="contactForm">
+            <form action="../PHP/send_email.php" method="POST">
                 <div class="input-group">
                     <input type="text" name="nom" placeholder="Nom" required>
                     <input type="text" name="prenom" placeholder="Prénom" required>
@@ -29,6 +30,50 @@
     </div>
 
     <div class="partie_droitec">
+        
+        <div class="partie_contact">
+            <h2>Contactez-nous</h2>
+            <div class="info-item">
+                <div class="icone">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                    <strong>Téléphone</strong>
+                    <p>+33 1 23 45 67 89</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="icone">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                    <strong>Email</strong>
+                    <p>contact@iut.fr</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="icone">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                    <strong>Adresse</strong>
+                    <p>123 Rue de l'IUT, 75000 Paris, France</p>
+                </div>
+            </div>
+            
+            <div class="partie_reseaux">
+                <h3>Suivez-nous</h3>
+                <div class="reseaux-icones">
+                    <a href="https://www.facebook.com/UniversiteGustaveEiffel" class="reseaux-icone"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/UGustaveEiffel" class="reseaux-icone"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/school/universit%C3%A9-gustave-eiffel/posts/?feedView=all" class="reseaux-icone"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/universitegustaveeiffel/" class="reseaux-icone"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
         <img src="../images/logo.png" alt="">
     </div>
 
