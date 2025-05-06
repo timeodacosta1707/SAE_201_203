@@ -37,12 +37,10 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    background-color: #e3f2fd;
     border-radius: 8px;
 }
 
 .tab {
-    background-color: #e3f2fd;
     margin: 5px;
     padding: 12px 24px;
     border: none;
@@ -59,7 +57,7 @@ body {
 }
 
 .tab:not(.active) {
-    background: none;
+    background-color: #e3f2fd;
     color: black;
 }
 
@@ -147,6 +145,65 @@ input[type="submit"]:hover {
     color: black;
 }
 
+.cont {
+    display: flex;
+    align-items: center;
+    transform: scale(1);
+}
+
+input[type="checkbox"] {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 5px;
+    display: inline-block;
+    appearance: none;
+    position: relative;
+    background-color: #e3f2fd;
+    border-radius: 15%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+input[type="checkbox"]::after {
+    content: "";
+    display: block;
+    height: 0.5rem;
+    width: 0.2rem;
+    border-bottom: .20rem solid #e3f2fd;
+    border-right: .20rem solid #e3f2fd;
+    opacity: 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+    position: absolute;
+    top: 45%;
+    left: 21%;
+    transition: .25s ease;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    background-color: #2e2a75;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease;
+}
+
+input[type="checkbox"]:checked::before {
+    height: 130%;
+    width: 130%;
+    opacity: 100%;
+}
+
+input[type="checkbox"]:checked::after {
+    opacity: 100%;
+}
+
 .partie_droite {
     width: 40%;
     display: flex;
@@ -187,184 +244,40 @@ input[type="submit"]:hover {
     text-decoration: underline;
 }
 
-.partie_droitec {
-    width: 40%;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    border-radius: 30px;
-    overflow: hidden;
-    background-color: #2e2a75;
-}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 
-.partie_droitec .logo_form {
-    height: 100%;
-    width: 100%;
-    opacity: 10%;
-    object-fit: cover;
-}
+    .partie_gauche {
+        width: 100%;
+        padding: 20px 10px;
+    }
 
-.cont {
-    display: flex;
-    align-items: center;
-    transform: scale(1);
-}
+    .partie_droite {
+        display: none;
+    }
 
-input[type="checkbox"] {
-    height: 1.2rem;
-    width: 1.2rem;
-    margin: 5px;
-    display: inline-block;
-    appearance: none;
-    position: relative;
-    background-color: #e3f2fd;
-    border-radius: 15%;
-    cursor: pointer;
-    overflow: hidden;
-}
+    .form {
+        max-width: 100%;
+        width: 90%;
+    }
 
-input[type="checkbox"]::after {
-    content: '';
-    display: block;
-    height: 0.5rem;
-    width: 0.2rem;
-    border-bottom: .20rem solid #e3f2fd;
-    border-right: .20rem solid #e3f2fd;
-    opacity: 0;
-    transform: rotate(45deg) translate(-50%, -50%);
-    position: absolute;
-    top: 45%;
-    left: 21%;
-    transition: .25s ease;
-}
+    .input-group {
+        flex-direction: column;
+        gap: 0;
+    }
 
-input[type="checkbox"]::before {
-    content: '';
-    display: block;
-    height: 0;
-    width: 0;
-    background-color: #2e2a75;
-    border-radius: 50%;
-    opacity: .5;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transition: .3s ease;
-}
+    .input-group input {
+        width: 92%;
+    }
 
-input[type="checkbox"]:checked::before {
-    height: 130%;
-    width: 130%;
-    opacity: 100%;
-}
+    .switch {
+        width: 90%;
+    }
 
-input[type="checkbox"]:checked::after {
-    opacity: 100%;
-}
-
-span {
-    font-size: 2rem;
-}
-
-.email {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    width: 100%;
-}
-
-.email h1 {
-    color: #2e2a75;
-}
-
-.email form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-#retour_form {
-    color: #2e2a75;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#retour_form:hover {
-    text-decoration: underline;
-}
-
-.code-conteneur {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.case {
-    width: 40px;
-    height: 50px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: bold;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    background-color: transparent;
-    outline: none;
-    transition: border-bottom 0.3s ease;
-}
-
-.case:focus {
-    border-bottom-color: #2e2a75;
-}
-
-.texte-verification {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #666;
-}
-
-.renvoyer-code {
-    display: block;
-    text-align: center;
-    margin-top: 15px;
-    color: #2e2a75;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.renvoyer-code:hover {
-    text-decoration: underline;
-}
-
-.bouton-envoyer {
-    background-color: #2e2a75;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 8px;
-    width: 100%;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.bouton-envoyer:hover {
-    background-color: #e3f2fd;
-    color: black;
-}
-
-.bouton-envoyer:disabled {
-    background-color: #9b98c0;
-    cursor: not-allowed;
-    color: white;
+    .tab {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
 }
