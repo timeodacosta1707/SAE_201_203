@@ -35,33 +35,176 @@ body {
     padding: 0 20px;
 }
 
-.banniere {
+.mentions-section {
+    padding: 80px 0;
+}
+
+.mentions-section h2 {
+    color: var(--couleur-primaire);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mentions-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--couleur-accent);
+}
+
+.mentions-card {
+    background-color: white;
+    border-radius: var(--arrondi);
+    box-shadow: var(--ombre-legere);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.editeur-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.editeur-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editeur-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.editeur-info h3 {
+    color: var(--couleur-primaire);
+    margin-bottom: 5px;
+}
+
+.editeur-info p {
+    color: var(--couleur-texte-leger);
+    margin-bottom: 0;
+}
+
+.contact-button {
+    margin-top: 20px;
+}
+
+.banniere-mentions {
     background: linear-gradient(rgba(45, 25, 100, 0.7), rgba(45, 25, 100, 0.7)),
         url("https://th.bing.com/th/id/R.8459c6247a911312f28cabf99c66ce1c?rik=SCLV4mAH7SETHw&riu=http%3a%2f%2fwww.alainrihn.fr%2ffiles%2fgimgs%2f27_mo-panoramique-2010-500px.jpg&ehk=C0lqjhW0IE6Q2ku5jYp4xglDF0DVIOUlMzkMCOA1584%3d&risl=&pid=ImgRaw&r=0") center / cover no-repeat;
     color: white;
     text-align: center;
-    padding: 180px 0 100px;
+    padding: 120px 0 60px;
     position: relative;
     margin-top: 0;
 }
 
-.banniere h1 {
-    font-size: 3rem;
+.banniere-mentions h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
     line-height: 1.2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.banniere h1 span {
-    color: #fff;
-    font-weight: bold;
+@media (max-width: 768px) {
+    .editeur-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .editeur-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .banniere-mentions h1 {
+        font-size: 2rem;
+    }
 }
 
-.banniere p {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+@media (max-width: 576px) {
+    .mentions-card {
+        padding: 20px;
+    }
+}
+
+.bouton {
+    display: inline-block;
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.bouton:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--ombre-moyenne);
+    background-color: #252069;
+}
+
+.bg-couliut {
+    background-color: var(--couleur-primaire);
+    color: white;
+}
+
+.custom-hover:hover {
+    background-color: #252069;
+    color: white;
+}
+
+.titre-section {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--couleur-primaire);
+    text-align: center;
+    position: relative;
+}
+
+.titre-section::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--couleur-accent);
+}
+
+.carte-service {
+    background-color: white;
+    border-radius: var(--arrondi);
+    overflow: hidden;
+    box-shadow: var(--ombre-legere);
+    transition: var(--transition);
+}
+
+.carte-service:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre-moyenne);
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
 }

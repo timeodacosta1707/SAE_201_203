@@ -145,7 +145,7 @@
 						</div>
 						<div class="card-body">
 							<h3 class="card-title">Salles de classe</h3>
-							<p class="card-text">Salles équipées pour cours, réunions ou événements avec matériel
+							<p class="card-text">Salles équipées pour les cours, les réunions ou les événements avec matériel
 								inclus.</p>
 							<a href="#" class="lien-service">Voir les disponibilités →</a>
 						</div>
@@ -249,8 +249,8 @@
 					<h3>Contact</h3>
 					<ul class="list-unstyled">
 						<li><i class="fas fa-map-marker-alt"></i> IUT de Marne-La-Vallée, Site de Meaux</li>
-						<li><i class="fas fa-phone"></i> 01 64 36 44 10</li>
-						<li><i class="fas fa-envelope"></i> mmi-meaux-dir.iut@univ-eiffel.fr</li>
+						<li><i class="fas fa-phone"></i> 01 64 36 44 15</li>
+						<li><i class="fas fa-envelope"></i>contact@iut.fr</li>
 					</ul>
 				</div>
 			</div>

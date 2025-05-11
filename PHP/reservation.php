@@ -58,7 +58,7 @@
 				<div class="dropdown">
 					<div class="icone-profil" data-bs-toggle="dropdown" aria-expanded="false">
 						<i class="fas fa-user"></i>
-					</div
+					</div>
 						<ul class="dropdown-menu dropdown-menu-end">
 							<li>
 								<a class="dropdown-item" href="./profile.php">
@@ -230,8 +230,8 @@
 					<h3>Contact</h3>
 					<ul class="list-unstyled">
 						<li><i class="fas fa-map-marker-alt"></i> IUT de Marne-La-Vallée, Site de Meaux</li>
-						<li><i class="fas fa-phone"></i> 01 64 36 44 10</li>
-						<li><i class="fas fa-envelope"></i> mmi-meaux-dir.iut@univ-eiffel.fr</li>
+						<li><i class="fas fa-phone"></i> 01 64 36 44 15</li>
+						<li><i class="fas fa-envelope"></i>contact@iut.fr</li>
 					</ul>
 				</div>
 			</div>
@@ -239,7 +239,7 @@
 			<div class="copyright">
 				<p>&copy; 2025 Université Gustave Eiffel - IUT Marne-la-Vallée. Tous droits réservés.</p>
 				<a href="../HTML/mentionlegal.html">Mentions Legales</a>
-				<a href="#">Conditions d'utilisations</a>
+				<a href="../HTML/conditionutilisation.html">Conditions d'utilisations</a>
 			</div>
 		</div>
 	</footer>
