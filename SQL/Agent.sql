@@ -1,0 +1,3 @@
+CREATE TABLE Agent (
+    Id_agent INTEGER(11) PRIMARY KEY
+);
