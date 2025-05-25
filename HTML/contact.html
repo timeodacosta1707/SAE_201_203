@@ -2,81 +2,260 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/navbar.css">
-    <link rel="stylesheet" href="../CSS/stylecontact.css">
-    <link rel="icon" href="../images/logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Contact</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact - Université Gustave Eiffel</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../CSS/navbar.css">
+	<link rel="stylesheet" href="../CSS/footer.css">
+	<link rel="icon" href="../images/logo.png">
+	<link rel="stylesheet" href="../CSS/stylecontact.css">
 </head>
 
 <body>
-    <div class="partie_gauche">
-        <img class="logo_form" src="../images/logo_iut.png" alt="Logo de l'IUT">
-        <h1 id="formTitle">Nous contacter</h1>
+	<nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div class="navbar-brand d-flex align-items-center">
+                <img src="../images/Republique.png" alt="République Française" class="logo-republique">
+                <img src="https://discret.univ-gustave-eiffel.fr/fileadmin/_processed_/b/4/csm_logo_univ_gustave_eiffel_rvb_e3ea850fc1.png"
+                    alt="Université Gustave Eiffel" class="logo-universite">
+            </div>
 
-        <div class="form" id="contactForm">
-            <form action="../PHP/send_email.php" method="POST">
-                <div class="input-group">
-                    <input type="text" name="nom" placeholder="Nom" required>
-                    <input type="text" name="prenom" placeholder="Prénom" required>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../PHP/pages/accueil.php">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../PHP/pages/reservation_materiels.php">Matériel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../PHP/pages/reservation_salles.php">Salles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../PHP/pages/mes_reservations.php">Réservations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center d-none d-lg-flex">
+                    <div class="dropdown">
+                        <div class="icone-profil" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="../PHP/pages/profile.php">
+                                    <i class="fas fa-user-circle"></i> <span>Mon profil</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../PHP/traitement/se_deconnecter.php">
+                                    <i class="fas fa-sign-out-alt"></i> <span>Se déconnecter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <input type="text" name="objet" id="objet" placeholder="Objet" required><br>
-                <textarea name="message" id="message" placeholder="Message"></textarea>
-                <input type="submit" value="Envoyer">
-            </form>
+
+                <div class="d-flex align-items-center d-lg-none justify-content-end mt-3">
+                    <div class="dropdown">
+                        <div class="icone-profil" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="../PHP/pages/profile.php">
+                                    <i class="fas fa-user-circle"></i> <span>Mon profil</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../PHP/traitement/se_deconnecter.php">
+                                    <i class="fas fa-sign-out-alt"></i> <span>Se déconnecter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="partie_droitec">
-        
-        <div class="partie_contact">
-            <h2>Contactez-nous</h2>
-            <div class="info-item">
-                <div class="icone">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <div>
-                    <strong>Téléphone</strong>
-                    <p>+33 1 23 45 67 89</p>
-                </div>
-            </div>
-            
-            <div class="info-item">
-                <div class="icone">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div>
-                    <strong>Email</strong>
-                    <p>contact@iut.fr</p>
-                </div>
-            </div>
-            
-            <div class="info-item">
-                <div class="icone">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div>
-                    <strong>Adresse</strong>
-                    <p>123 Rue de l'IUT, 75000 Paris, France</p>
-                </div>
-            </div>
-            
-            <div class="partie_reseaux">
-                <h3>Suivez-nous</h3>
-                <div class="reseaux-icones">
-                    <a href="https://www.facebook.com/UniversiteGustaveEiffel" class="reseaux-icone"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://x.com/UGustaveEiffel" class="reseaux-icone"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/school/universit%C3%A9-gustave-eiffel/posts/?feedView=all" class="reseaux-icone"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/universitegustaveeiffel/" class="reseaux-icone"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        
-        <img src="../images/logo.png" alt="">
-    </div>
+	<section class="banniere-contact">
+		<div class="container">
+			<h1>Contactez-<span>nous</span></h1>
+			<p>Nous sommes à votre disposition pour répondre à toutes vos questions</p>
+		</div>
+	</section>
 
+	<section class="py-5">
+		<div class="container">
+			<h2 class="titre-section">Nous contacter</h2>
+			
+			<div class="row g-4">
+				<div class="col-lg-6">
+					<div class="card carte-contact p-4">
+						<h3 class="mb-4" style="color: var(--couleur-primaire);">Envoyez-nous un message</h3>
+						
+						<form action="../PHP/traitement/send_email.php" method="POST">
+							<div class="mb-3">
+								<label for="nom" class="form-label">Nom complet</label>
+								<input type="text" class="form-control" id="nom" name="nom" required>
+							</div>
+							
+							<div class="mb-3">
+								<label for="email" class="form-label">Adresse email</label>
+								<input type="email" class="form-control" id="email" name="email" required>
+							</div>
+							
+							<div class="mb-3">
+								<label for="sujet" class="form-label">Sujet</label>
+								<select class="form-select" id="sujet" name="sujet" required>
+									<option value="" selected disabled>Choisissez un sujet</option>
+									<option value="reservation">Question sur les réservations</option>
+									<option value="materiel">Information sur le matériel</option>
+									<option value="salles">Information sur les salles</option>
+									<option value="technique">Problème technique</option>
+									<option value="autre">Autre demande</option>
+								</select>
+							</div>
+							
+							<div class="mb-3">
+								<label for="message" class="form-label">Votre message</label>
+								<textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+							</div>
+							
+							<button type="submit" class="btn bg-couliut custom-hover text-white">Envoyer le message</button>
+						</form>
+					</div>
+				</div>
+				
+				<div class="col-lg-6">
+					<div class="card carte-contact p-4 h-100">
+						<h3 class="mb-4" style="color: var(--couleur-primaire);">Informations de contact</h3>
+						
+						<div class="contact-info-item">
+							<i class="fas fa-map-marker-alt"></i>
+							<div class="contact-info-content">
+								<h4>Adresse</h4>
+								<p>IUT de Marne-La-Vallée, Site de Meaux</p>
+								<p>17 Rue Abraham Lincoln, 77100 Meaux</p>
+							</div>
+						</div>
+						
+						<div class="contact-info-item">
+							<i class="fas fa-phone"></i>
+							<div class="contact-info-content">
+								<h4>Téléphone</h4>
+								<p>01 64 36 44 15</p>
+							</div>
+						</div>
+						
+						<div class="contact-info-item">
+							<i class="fas fa-envelope"></i>
+							<div class="contact-info-content">
+								<h4>Email</h4>
+								<p>contact@iut.fr</p>
+							</div>
+						</div>
+						
+						<div class="contact-info-item">
+							<i class="fas fa-clock"></i>
+							<div class="contact-info-content">
+								<h4>Horaires d'ouverture</h4>
+								<p>Lundi - Vendredi: 8h00 - 18h00</p>
+								<p>Fermé les week-ends et jours fériés</p>
+							</div>
+						</div>
+						
+						<div class="mt-4">
+							<h4 style="color: var(--couleur-primaire);">Suivez-nous</h4>
+							<div class="d-flex mt-3">
+								<a href="https://www.facebook.com/UniversiteGustaveEiffel" target="_blank" class="me-3" style="color: var(--couleur-primaire); font-size: 1.5rem;">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+								<a href="https://www.youtube.com/c/Universit%C3%A9GustaveEiffel" target="_blank" class="me-3" style="color: var(--couleur-primaire); font-size: 1.5rem;">
+									<i class="fab fa-youtube"></i>
+								</a>
+								<a href="https://www.instagram.com/universitegustaveeiffel" target="_blank" class="me-3" style="color: var(--couleur-primaire); font-size: 1.5rem;">
+									<i class="fab fa-instagram"></i>
+								</a>
+								<a href="https://www.linkedin.com/school/universit%C3%A9-gustave-eiffel/" target="_blank" style="color: var(--couleur-primaire); font-size: 1.5rem;">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="py-5 bg-light">
+		<div class="container">
+			<h2 class="titre-section">Nous trouver</h2>
+			
+			<div class="card">
+				<div class="card-body p-0">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.0881566511166!2d2.8903873!3d48.9171053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61c6b1a8c7e33%3A0x715c20954d7c0e0e!2s17%20Rue%20Jablinot%2C%2077100%20Meaux!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
+						width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="pied-page">
+		<div class="container">
+			<div class="contenu-pied-page">
+				<div class="colonne-footer">
+					<h3>IUT de Meaux</h3>
+					<div class="reseaux-sociaux">
+						<a href="https://www.facebook.com/UniversiteGustaveEiffel" target="_blank"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.youtube.com/c/Universit%C3%A9GustaveEiffel" target="_blank"><i class="fab fa-youtube"></i></a>
+						<a href="https://www.instagram.com/universitegustaveeiffel" target="_blank"><i class="fab fa-instagram"></i></a>
+						<a href="https://www.linkedin.com/school/universit%C3%A9-gustave-eiffel/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+
+				<div class="colonne-footer">
+					<h3>Liens rapides</h3>
+					<ul class="list-unstyled">
+						<li><a href="../PHP/pages/accueil.php">Accueil</a></li>
+						<li><a href="../PHP/pages/reservation_materiels.php">Matériel</a></li>
+						<li><a href="../PHP/pages/reservation_salles.php">Salles</a></li>
+						<li><a href="../PHP/pages/mes_reservations.html">Réservations</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+
+				<div class="colonne-footer">
+					<h3>Contact</h3>
+					<ul class="list-unstyled">
+						<li><i class="fas fa-map-marker-alt"></i> IUT de Marne-La-Vallée, Site de Meaux</li>
+						<li><i class="fas fa-phone"></i> 01 64 36 44 15</li>
+						<li><i class="fas fa-envelope"></i> contact@iut.fr</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="copyright">
+				<p>&copy; 2025 Université Gustave Eiffel - IUT Marne-la-Vallée. Tous droits réservés.</p>
+				<a href="../HTML/mentionlegal.html">Mentions Legales</a>
+				<a href="../PHP/pages/conditionutilisation.php">Conditions d'utilisations</a>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../JS/navbar.js"></script>
 </body>
 
 </html>

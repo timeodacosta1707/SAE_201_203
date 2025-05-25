@@ -1,0 +1,8 @@
+header {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+header .navbar .logo_nav {
+    height: 70px;
+}

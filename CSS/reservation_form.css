@@ -1,0 +1,191 @@
+.reservation-container {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.calendar-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.selection-hint {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    background: #2f2a86;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.selection-hint i {
+    font-size: 1.2rem;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.fc-event {
+    cursor: pointer;
+}
+
+.banniere {
+    background: linear-gradient(rgba(45, 25, 100, 0.7), rgba(45, 25, 100, 0.7)),
+        url("https://th.bing.com/th/id/R.8459c6247a911312f28cabf99c66ce1c?rik=SCLV4mAH7SETHw&riu=http%3a%2f%2fwww.alainrihn.fr%2ffiles%2fgimgs%2f27_mo-panoramique-2010-500px.jpg&ehk=C0lqjhW0IE6Q2ku5jYp4xglDF0DVIOUlMzkMCOA1584%3d&risl=&pid=ImgRaw&r=0") center / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.banniere h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banniere p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles pour FullCalendar */
+.fc {
+    font-family: inherit;
+}
+
+.fc .fc-toolbar-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.fc .fc-button {
+    background-color: #2f2a86;
+    border-color: #2f2a86;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.fc .fc-button:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+    background-color: #0a58ca;
+    border-color: #0a58ca;
+}
+
+.fc .fc-timegrid-slot {
+    height: 2.5em;
+}
+
+.fc .fc-timegrid-slot-label {
+    font-size: 0.9em;
+}
+
+.fc .fc-day-today {
+    background-color: rgba(13, 110, 253, 0.1) !important;
+}
+
+.fc .fc-timegrid-now-indicator-line {
+    border-color: #dc3545;
+}
+
+.fc .fc-timegrid-now-indicator-arrow {
+    border-color: #dc3545;
+}
+
+.fc .fc-event {
+    background-color: #2f2a86;
+    border-color: #2f2a86;
+    padding: 2px 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.fc .fc-event:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.fc .fc-col-header-cell {
+    background-color: #f8f9fa;
+    padding: 8px 0;
+}
+
+.fc .fc-col-header-cell-cushion {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.fc .fc-timegrid-slot-minor {
+    border-top-style: dashed;
+}
+
+/* Ajustement des proportions */
+.col-md-6 {
+    width: 65%;
+}
+
+.col-md-6:last-child {
+    width: 35%;
+}
+
+/* Styles des boutons et formulaires */
+.btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+.btn-couliut {
+    background-color: #2f2a86;
+    border-color: #2f2a86;
+    color: white;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-couliut:hover {
+    background-color: #1f1a66;
+    border-color: #1f1a66;
+    color: white;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.form-control {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+.mb-3 {
+    margin-bottom: 0.8rem !important;
+}
+
+.form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+} 

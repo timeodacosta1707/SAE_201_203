@@ -1,0 +1,144 @@
+:root {
+    --couleur-primaire: #2f2a86;
+    --couleur-secondaire: #0d1125;
+    --couleur-accent: #ff4d4d;
+    --couleur-claire: #f9f9fb;
+    --couleur-foncee: #1f1f1f;
+    --couleur-texte: #333;
+    --couleur-texte-leger: #666;
+    --couleur-bordure: #ddd;
+    --ombre-legere: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --ombre-moyenne: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --ombre-forte: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+    --arrondi: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--couleur-claire);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-header {
+    background: linear-gradient(rgba(45, 25, 100, 0.8), rgba(45, 25, 100, 0.8)),
+        url("https://th.bing.com/th/id/R.8459c6247a911312f28cabf99c66ce1c?rik=SCLV4mAH7SETHw&riu=http%3a%2f%2fwww.alainrihn.fr%2ffiles%2fgimgs%2f27_mo-panoramique-2010-500px.jpg&ehk=C0lqjhW0IE6Q2ku5jYp4xglDF0DVIOUlMzkMCOA1584%3d&risl=&pid=ImgRaw&r=0") center / cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 0 30px;
+    position: relative;
+    margin-top: 0;
+}
+
+.profile-content {
+    padding: 50px 0;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: var(--arrondi);
+    box-shadow: var(--ombre-moyenne);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.profile-card-header {
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-card-body {
+    padding: 30px;
+}
+
+/* Styles pour l'avatar d'initiales */
+.initials-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+
+.bg-couliut {
+    background-color: var(--couleur-primaire);
+    color: white;
+}
+
+.btn-primary {
+    background-color: var(--couleur-primaire);
+    border-color: var(--couleur-primaire);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: #252069;
+    border-color: #252069;
+    transform: translateY(-3px);
+    box-shadow: var(--ombre-moyenne);
+}
+
+.reservation-card {
+    border-left: 4px solid var(--couleur-primaire);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.reservation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--ombre-legere);
+}
+
+.reservation-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status-active {
+    background-color: #e6f7e6;
+    color: #28a745;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #ffc107;
+}
+
+.status-completed {
+    background-color: #e2e3e5;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        padding: 100px 0 20px;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+}

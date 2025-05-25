@@ -1,0 +1,183 @@
+:root {
+    --couleur-primaire: #2f2a86;
+    --couleur-secondaire: #0d1125;
+    --couleur-accent: #ff4d4d;
+    --couleur-claire: #f9f9fb;
+    --couleur-foncee: #1f1f1f;
+    --couleur-texte: #333;
+    --couleur-texte-leger: #666;
+    --couleur-bordure: #ddd;
+    --ombre-legere: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --ombre-moyenne: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --ombre-forte: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+    --arrondi: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--couleur-claire);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+}
+
+.conteneur {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.banniere-contact {
+    background: linear-gradient(rgba(45, 25, 100, 0.7), rgba(45, 25, 100, 0.7)),
+        url("https://th.bing.com/th/id/R.8459c6247a911312f28cabf99c66ce1c?rik=SCLV4mAH7SETHw&riu=http%3a%2f%2fwww.alainrihn.fr%2ffiles%2fgimgs%2f27_mo-panoramique-2010-500px.jpg&ehk=C0lqjhW0IE6Q2ku5jYp4xglDF0DVIOUlMzkMCOA1584%3d&risl=&pid=ImgRaw&r=0") center / cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 0 60px;
+    position: relative;
+    margin-top: 0;
+}
+
+.banniere-contact h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banniere-contact h1 span {
+    color: #fff;
+    font-weight: bold;
+}
+
+.banniere-contact p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.bouton {
+    display: inline-block;
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.bouton:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--ombre-moyenne);
+    background-color: #252069;
+}
+
+.bg-couliut {
+    background-color: var(--couleur-primaire);
+    color: white;
+}
+
+.custom-hover:hover {
+    background-color: #252069;
+}
+
+.titre-section {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--couleur-primaire);
+    text-align: center;
+    position: relative;
+}
+
+.titre-section::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--couleur-accent);
+}
+
+.carte-contact {
+    height: 100%;
+    transition: var(--transition);
+    background-color: white;
+    border-radius: var(--arrondi);
+    overflow: hidden;
+    box-shadow: var(--ombre-legere);
+}
+
+.carte-contact:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre-moyenne);
+}
+
+.form-control:focus {
+    border-color: var(--couleur-primaire);
+    box-shadow: 0 0 0 0.25rem rgba(47, 42, 134, 0.25);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-info-item i {
+    font-size: 1.5rem;
+    color: var(--couleur-primaire);
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+}
+
+.contact-info-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--couleur-primaire);
+}
+
+.contact-info-content p {
+    margin: 0;
+    color: var(--couleur-texte-leger);
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 992px) {
+    .banniere-contact h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banniere-contact {
+        padding: 200px 0 80px;
+    }
+
+    .banniere-contact h1 {
+        font-size: 2rem;
+    }
+
+    .banniere-contact p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .grille-services {
+        grid-template-columns: 1fr;
+    }
+}

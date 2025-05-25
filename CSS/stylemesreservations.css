@@ -1,0 +1,46 @@
+:root {
+    --couleur-claire: #f9f9fb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--couleur-claire);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-header {
+    background: linear-gradient(rgba(45, 25, 100, 0.8), rgba(45, 25, 100, 0.8)),
+        url("https://th.bing.com/th/id/R.8459c6247a911312f28cabf99c66ce1c?rik=SCLV4mAH7SETHw&riu=http%3a%2f%2fwww.alainrihn.fr%2ffiles%2fgimgs%2f27_mo-panoramique-2010-500px.jpg&ehk=C0lqjhW0IE6Q2ku5jYp4xglDF0DVIOUlMzkMCOA1584%3d&risl=&pid=ImgRaw&r=0") center / cover no-repeat;
+    color: var(--couleur-claire);
+    text-align: center;
+    padding: 120px 0 30px;
+    position: relative;
+    margin-top: 0;
+}
+
+.chemin {
+    background-color: var(--couleur-claire);
+    padding: 20px 50px;
+}
+
+.chemin p {
+    color: gray;
+}
+
+.chemin a {
+    text-decoration: none;
+    color: black;
+}
+
+.chemin a:hover {
+    text-decoration: underline;
+}

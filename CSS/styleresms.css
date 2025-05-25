@@ -1,0 +1,623 @@
+:root {
+    --couleur-primaire: #2f2a86;
+    --couleur-secondaire: #0d1125;
+    --couleur-accent: #ff4d4d;
+    --couleur-success: #28a745;
+    --couleur-warning: #ffc107;
+    --couleur-claire: #f9f9fb;
+    --couleur-foncee: #1f1f1f;
+    --couleur-texte: #333;
+    --couleur-texte-leger: #666;
+    --couleur-bordure: #ddd;
+    --ombre-legere: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --ombre-moyenne: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --ombre-forte: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+    --arrondi: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--couleur-claire);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+}
+
+.conteneur {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.banniere {
+    background: linear-gradient(rgba(45, 25, 100, 0.7), rgba(45, 25, 100, 0.7)),
+        url("https://th.bing.com/th/id/R.8459c6247a911312f28cabf99c66ce1c?rik=SCLV4mAH7SETHw&riu=http%3a%2f%2fwww.alainrihn.fr%2ffiles%2fgimgs%2f27_mo-panoramique-2010-500px.jpg&ehk=C0lqjhW0IE6Q2ku5jYp4xglDF0DVIOUlMzkMCOA1584%3d&risl=&pid=ImgRaw&r=0") center / cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 180px 0 100px;
+    position: relative;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.banniere h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banniere h1 span {
+    color: #fff;
+    font-weight: bold;
+}
+
+.banniere p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.admin-header {
+    background: linear-gradient(rgba(45, 25, 100, 0.7), rgba(45, 25, 100, 0.7)),
+        url("https://th.bing.com/th/id/R.8459c6247a911312f28cabf99c66ce1c?rik=SCLV4mAH7SETHw&riu=http%3a%2f%2fwww.alainrihn.fr%2ffiles%2fgimgs%2f27_mo-panoramique-2010-500px.jpg&ehk=C0lqjhW0IE6Q2ku5jYp4xglDF0DVIOUlMzkMCOA1584%3d&risl=&pid=ImgRaw&r=0") center / cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 0 60px;
+    position: relative;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.admin-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.materiel-header {
+    background: linear-gradient(rgba(45, 25, 100, 0.7), rgba(45, 25, 100, 0.7)),
+        url("../images/photo_iut.jpg") center / cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 0 60px;
+    position: relative;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.materiel-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.materiel-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.search-filter-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+}
+
+.search-bar input {
+    padding-right: 50px;
+    height: 48px;
+    border-radius: 24px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.search-bar .btn-search {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    background-color: #2f2a86;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-select {
+    height: 48px;
+    border-radius: 24px;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+    font-size: 0.95rem;
+    color: var(--couleur-texte);
+    background-color: white;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.form-select:focus {
+    border-color: #2f2a86;
+    box-shadow: 0 0 0 0.2rem rgba(47, 42, 134, 0.15);
+}
+
+.form-select option {
+    padding: 10px;
+}
+
+.d-flex.gap-2 {
+    gap: 1rem !important;
+    width: 100%;
+}
+
+.filter-bar select {
+    height: 48px;
+    border-radius: 24px;
+    border: 1px solid #ddd;
+}
+
+.btn-filter {
+    height: 48px;
+    border-radius: 24px;
+    background-color: #2f2a86;
+    color: white;
+    padding: 0 20px;
+}
+
+.materials-grid {
+    margin-top: 30px;
+}
+
+.material-item .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    position: relative;
+}
+
+.material-item .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.status-badge.available {
+    background-color: var(--couleur-success);
+    color: white;
+}
+
+.status-badge.reserved {
+    background-color: var(--couleur-warning);
+    color: black;
+}
+
+.carousel {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--couleur-primaire);
+}
+
+.card-text {
+    color: #666;
+    font-size: 0.9rem;
+    height: 80px;
+    overflow: hidden;
+}
+
+.card-footer {
+    background-color: white;
+    border-top: 1px solid #eee;
+    padding: 15px 20px;
+}
+
+.btn-reserve {
+    width: 100%;
+    background-color: var(--couleur-primaire);
+    color: white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-reserve:hover {
+    background-color: #23216b;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-reserve:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-reserve i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn-reserve:hover i {
+    transform: scale(1.1);
+}
+
+.icon-btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: var(--couleur-primaire);
+    color: white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-btn:hover {
+    background-color: #23216b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.add-icon::before,
+.add-icon::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+}
+
+.add-icon::before {
+    width: 20px;
+    height: 2px;
+    top: 9px;
+}
+
+.add-icon::after {
+    width: 2px;
+    height: 20px;
+    left: 9px;
+}
+
+.btn-txt {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.pagination .page-link {
+    color: var(--couleur-primaire);
+    border-radius: 5px;
+    margin: 0 3px;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--couleur-primaire);
+    border-color: var(--couleur-primaire);
+}
+
+.modal-content {
+    border-radius: 10px;
+    border: none;
+}
+
+.modal-header {
+    background-color: var(--couleur-primaire);
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-footer .btn-primary {
+    background-color: var(--couleur-primaire);
+    border-color: var(--couleur-primaire);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .materiel-header {
+        padding: 40px 0;
+    }
+
+    .materiel-header h1 {
+        font-size: 2rem;
+    }
+
+    .card-text {
+        height: auto;
+        max-height: 80px;
+    }
+
+    .search-filter-section {
+        padding: 15px;
+    }
+    
+    .search-bar input,
+    .form-select {
+        height: 42px;
+    }
+    
+    .search-bar .btn-search {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Styles pour les boutons d'action */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Bouton d'édition avec animation */
+.editBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: #2f2a86;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px rgba(47, 42, 134, 0.2);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.editBtn::before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    background-color: #1a1648;
+    position: absolute;
+    z-index: 1;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.editBtn:hover::before {
+    transform: scale(1);
+}
+
+.editBtn:hover {
+    box-shadow: 0px 5px 10px rgba(47, 42, 134, 0.3);
+    transform: translateY(-2px);
+}
+
+.editBtn svg {
+    height: 17px;
+    fill: white;
+    z-index: 2;
+    position: relative;
+    transition: all 0.2s ease;
+    transform-origin: bottom;
+}
+
+.editBtn:hover svg {
+    transform: rotate(-15deg) translateX(5px);
+}
+
+.editBtn::after {
+    content: "";
+    width: 15px;
+    height: 1.5px;
+    position: absolute;
+    bottom: 15px;
+    left: -5px;
+    background-color: white;
+    border-radius: 2px;
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-out;
+}
+
+.editBtn:hover::after {
+    transform: scaleX(1);
+    left: 0px;
+    transform-origin: right;
+}
+
+/* Bouton de suppression animé */
+.bin-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #dc3545;
+    cursor: pointer;
+    border: 2px solid rgba(220, 53, 69, 0.3);
+    transition-duration: 0.3s;
+}
+
+.bin-bottom {
+    width: 15px;
+}
+
+.bin-top {
+    width: 17px;
+    transform-origin: right;
+    transition-duration: 0.3s;
+}
+
+.bin-button:hover .bin-top {
+    transform: rotate(45deg);
+}
+
+.bin-button:hover {
+    background-color: #bb2d3b;
+    border-color: rgba(187, 45, 59, 0.3);
+    box-shadow: 0px 5px 10px rgba(220, 53, 69, 0.3);
+    transform: translateY(-2px);
+}
+
+.bin-button:active {
+    transform: scale(0.9);
+}
+
+/* Bouton d'ajout animé */
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.add-btn:hover {
+    width: 180px;
+}
+
+.add-btn::before,
+.add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: #2f2a86;
+}
+
+.add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+    outline: none;
+}
+
+.btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+    opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: #2f2a86;
+    overflow: hidden;
+}
+
+.add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}

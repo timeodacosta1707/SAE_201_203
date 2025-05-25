@@ -1,0 +1,22 @@
+/* Styles pour les sections */
+.section-title {
+    margin-bottom: 30px;
+    color: var(--couleur-primaire);
+}
+
+/* Styles pour les cartes */
+.card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background-color: var(--couleur-primaire);
+    color: white;
+}
+
+/* Styles pour les boutons d'action */
+.btn-action {
+    margin-right: 5px;
+} 

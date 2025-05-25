@@ -50,10 +50,8 @@ a {
 }
 
 a:hover {
-    color: #2e2a75;
-    transform: scale(1.1);
-    background-color: #f9f9f9;
-    border-radius: 50px;
+    background-color: #e3f2fd;
+    color: black;
 }
 
 @keyframes fadeIn {
